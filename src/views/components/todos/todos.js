@@ -18,7 +18,7 @@ class Todos extends PureComponent {
     return (
       <ul>
         {data.map(({ title }) => (
-          <li>{title}</li>
+          <li key={`todo-${title}`}>{title}</li>
         ))}
       </ul>
     );
