@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from "./redux/configure-store";
-import Home from './views/home';
+import Home from './views/pages/home';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
@@ -11,4 +11,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
 registerServiceWorker();
