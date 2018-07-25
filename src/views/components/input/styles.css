@@ -1,0 +1,65 @@
+.input {
+  margin: 25px 0 5px 0;
+  position: relative;
+}
+
+.input__input {
+  width: 100%;
+  border: 1px solid #BDBDBD;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.input__input:focus {
+  outline: none;
+}
+
+.input__placeholder {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  transition: 0.2s all ease-in-out;
+  font-size: 14px;
+  pointer-events: none;
+  color: #757575;
+}
+
+.input--state-error .input__placeholder,
+.input__input:valid ~ .input__placeholder,
+.input__input:focus ~ .input__placeholder {
+  top: -12px;
+  font-size: 12px;
+}
+
+.input__border {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #03A9F4;
+  transition: 0.3s all ease-in-out;
+}
+
+.input__input:focus ~ .input__border {
+  width: 100%;
+  left: 0;
+}
+
+.input--state-error {
+
+}
+
+.input--state-error .input__border {
+  background-color: #FF4081;
+  width: 100%;
+  left: 0;
+}
+
+.input--state-error .input__placeholder {
+  color: #FF4081;
+  font-weight: 700;
+}

@@ -6,6 +6,7 @@ import configureStore from "./redux/configure-store";
 import routes from "./routing";
 import Layout from "./views/layouts/base";
 import registerServiceWorker from "./registerServiceWorker";
+import "./styles.css";
 
 const App = withRouter(() => (
   <Layout>

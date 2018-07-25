@@ -1,0 +1,60 @@
+@keyframes wave {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  75% {
+    transform: scale(500);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.button {
+  padding: 12px 22px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s all ease-in-out;
+}
+
+.button:focus,
+.button:hover {
+  background-color: darkgrey;
+}
+
+.button__text {
+
+}
+
+.button__wave {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button__wave--state-animating {
+  animation-name: wave;
+  animation-duration: 1s;
+}
+
+.button--colour-blue {
+  background-color: #03A9F4;
+  color: #ffffff;
+}
+
+.button--colour-blue:focus,
+.button--colour-blue:hover {
+  background-color: #0288D1;
+}

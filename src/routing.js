@@ -1,5 +1,5 @@
 import Home from "./views/pages/home";
-import Welcome from "./views/pages/welcome";
+import Create from "./views/pages/create";
 
 const routing = [
   {
@@ -8,8 +8,8 @@ const routing = [
     component: Home
   },
   {
-    path: "/welcome",
-    component: Welcome
+    path: "/create",
+    component: Create
   }
 ];
 

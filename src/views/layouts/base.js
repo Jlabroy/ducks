@@ -7,8 +7,14 @@ class Base extends PureComponent {
 
     return (
       <div>
-        <Link to="/">Todos</Link>
-        <Link to="/welcome">Welcome</Link>
+        <ul>
+          <li>
+            <Link to="/">Todos</Link>
+          </li>
+          <li>
+            <Link to="/create">Create</Link>
+          </li>
+        </ul>  
 
         {children}
       </div>
