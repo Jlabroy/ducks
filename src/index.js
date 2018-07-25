@@ -8,6 +8,8 @@ import Layout from "./views/layouts/base";
 import registerServiceWorker from "./registerServiceWorker";
 import "./styles.css";
 
+
+
 const App = withRouter(() => (
   <Layout>
     {routes.map(({ path, ...rest }) => (
