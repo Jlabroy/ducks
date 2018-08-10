@@ -5,16 +5,20 @@ import sagas from "./sagas";
 
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(
-  reducers,
-  compose(
-   applyMiddleware(sagaMiddleware),
-   typeof window === "object" &&
-   typeof window.devToolsExtension !== "undefined" ?
-     window.devToolsExtension() : f => f
- )
-);
+const store = initialState => {
+  const initStore = createStore(
+    reducers,
+    initialState,
+    compose(
+      applyMiddleware(sagaMiddleware),
+      typeof window === "object" &&
+      typeof window.devToolsExtension !== "undefined" ?
+        window.devToolsExtension() : f => f
+    )
+  );
 
-sagaMiddleware.run(sagas)
+  sagaMiddleware.run(sagas);
+  return initStore;
+};
 
 export default store;

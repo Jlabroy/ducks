@@ -1,0 +1,13 @@
+{
+  "presets": ["react-app", "es2015"],
+  "plugins": [
+    "syntax-dynamic-import",
+    "dynamic-import-node",
+    [
+      "babel-plugin-transform-require-ignore",
+      {
+        "extensions": [".css"]
+      }
+    ]
+  ]
+}
