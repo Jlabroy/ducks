@@ -6,7 +6,7 @@ class Base extends PureComponent {
     const { children } = this.props;
 
     return (
-      <div>
+      <div style={{height: "100%"}}>
         <ul>
           <li>
             <Link to="/">Todos</Link>

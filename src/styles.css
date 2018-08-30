@@ -2,4 +2,30 @@
 body {
   font-family: Helvetica, sans-serif;
   color: #212121;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+
+.gradient {
+  background: linear-gradient(180deg, #c31010, #000000, #26a9f3, #000000);
+  background-size: 400% 400%;
+
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  height: 100%;
+}
+
+.animate {
+  animation: AnimationName 2s ease forwards;
+}
+
+@keyframes AnimationName {
+    0%{background-position:50% 0%}
+    100%{background-position:51% 100%}
 }
